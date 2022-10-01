@@ -16,6 +16,7 @@ img,
 /*      SOME SETTINGS FOR BODY      */
 
 body {
+    overflow-x: hidden;
     font-family: TNYAdobeCaslonPro, "Times New Roman", Times, serif;
 }
 
@@ -26,7 +27,7 @@ body {
     grid-template-areas: "header header header header"
                          "main-content main-content main-content main-content"
                          "main-content main-content main-content main-content"
-                         "footer footer footer footer";
+                         "main-content main-content main-content main-content";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 148px 1fr 1fr 80px;
     gap: 1rem;
@@ -46,7 +47,6 @@ body {
 }
 
 .up-header {
-    padding: 20px 0 20px 0;
     display: flex;
     justify-content: center;
     grid-row: 1/4;
@@ -63,23 +63,38 @@ body {
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     padding-right: 25px;
 
     font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 12px;
-    align-items: center;
+    align-items: end;
+
+    position: relative;
 }
 
 .newsletter {
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 2/3;
 }
 
 .sign-in {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.subscribe {
     grid-column: 4/5;
     grid-row: 2/3;
+
+    position: absolute;
+    top: 0;
+
+    padding: 6px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: rgb(61, 151, 241);
 }
 
 .search {
@@ -105,10 +120,11 @@ body {
 }
 
 .sub-info {
+    max-width: 100%;
     display: flex;
     margin: auto;
     font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 12px;
 }
 
@@ -116,10 +132,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
-
-/* .sidebar {
-    grid-area: sidebar;
-} */
 
 /*      SOME SETTINGS FOR MAIN PART     */
 
@@ -177,44 +189,49 @@ border: 1px solid lightgray;
     grid-template-rows: repeat(2, 1fr);
 }
 
-#left-content-1 {
+#left-content-1,
+#left-content-2 {
     display: flex;
     flex-direction: column;
 }
 
-#left-content-1-pic, #left-content-1-text {
+#left-content-1-pic, #left-content-1-text,
+#left-content-2-pic, #left-content-2-text {
     height: 50%;
 }
 
-#left-content-1-pic {
+#left-content-1-pic,
+#left-content-2-pic {
     display: flex;
     justify-content: center;
 }
 
-#left-content-1-pic > img {
+#left-content-1-pic > img,
+#left-content-2-pic > img {
 width: 100%;
 height: 100%;
 }
 
-#annals {
+#sub-pic {
     color: rgb(219, 51, 52);
     font-weight: 400;
     font-size: 14px;
     font-family: IrvinText, Georgia, "Times New Roman", Times, serif;
 }
 
-#tackling {
-    font-weight: 600;
-    font-size: 18px;
-}
-
-#software {
+#title {
     font-weight: 500;
+    font-size: 20px;
+}
+
+#annotation {
+    font-weight: 300;
     font-size: 18px;
 }
 
-#hopper {
+#author {
     font-weight: 600;
+    font-size: 14px;
     font-family: IrvinText, Georgia, "Times New Roman", Times, serif;
 }
 
@@ -222,6 +239,38 @@ height: 100%;
     display: grid;
     grid-template-columns: 1fr 20%;
 }
+
+#right-content {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
+#news-block {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#articles {
+    display: flex;
+    flex-direction: column;
+}
+
+#sub-article {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    height: 20%;
+}
+
+#politic-pic {
+    padding-top: 24px;
+    width: 75px;
+    height: 56px;
+}
+
 
 /*      SOME SETTINGS FOR FOOTER        */
 
