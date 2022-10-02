@@ -371,9 +371,22 @@ height: 100%;
     max-width: 320px;
 }
 
+.game-pic:hover,
+.game-info > p:hover {
+cursor: pointer;
+}
+
+#game-info:hover {
+    text-decoration: underline;
+}
+
 .game-pic > img {
     max-width: 100%;
     max-height: 90%;
+}
+
+.game-info {
+    font-family: IrvinText, Georgia, "Times New Roman", Times, serif;
 }
 
 .footer {
@@ -386,4 +399,8 @@ height: 100%;
 
 .footer-logo {
     padding-bottom: 15px;
+}
+
+.footer-logo:hover {
+cursor: pointer;
 }
