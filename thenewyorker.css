@@ -24,8 +24,8 @@ body {
 
 .container {
     display: grid;
-    width: 100%;
-    height: 1400px;
+    max-width: 100%;
+    max-height: 100%;
     grid-template-areas: "header header header header"
                          "main-content main-content main-content main-content"
                          "main-content main-content main-content main-content"
@@ -373,29 +373,26 @@ min-height: 100%;
 /*      SOME SETTINGS FOR FOOTER        */
 
 .foot-games {
-    display: grid;
-    grid-template-columns: 5% 1fr 5%;
     max-width: 100%;
+    max-height: 80%;
 }
 
 .footer-games-row {
+    margin: 20px;
     max-width: 100%;
-    min-height: 100%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    max-height: 100%;
 }
 
 .games-wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    min-height: 100%;
+    display: grid;
+    margin: 40px;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-gap: 15px;
 }
 
 .footer-game {
-max-width: 300px;
-    min-height: 100%;
-    object-fit: cover;
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .game-pic:hover,
@@ -418,7 +415,7 @@ cursor: pointer;
 }
 
 .footer {
-    min-height: 60px;
+    max-width: 100%;
     background-color: black;
     padding-top: 35px;
     padding-bottom: 25px;
@@ -426,6 +423,8 @@ cursor: pointer;
 }
 
 .footer-logo {
+    max-width: 100%;
+    max-height: 100%;
     padding-bottom: 15px;
 }
 
