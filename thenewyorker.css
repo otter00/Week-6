@@ -149,6 +149,7 @@ body {
 
     display: grid;
     grid-template-rows: 100px 1fr 80px;
+    max-height: 100%;
 }
 
 .main-head-with-pic {
@@ -186,6 +187,8 @@ border: 1px solid lightgray;
     grid-template-columns: 25% 1fr 25%;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    max-height: 100%;
 }
 
 #left-section {
@@ -206,7 +209,7 @@ border: 1px solid lightgray;
 
 #left-content-1-pic, #left-content-1-text,
 #left-content-2-pic, #left-content-2-text {
-    height: 50%;
+    min-height: 50%;
 }
 
 #left-content-1-pic,
@@ -217,12 +220,12 @@ border: 1px solid lightgray;
 
 #left-content-1-pic > img,
 #left-content-2-pic > img {
-width: 100%;
-height: 100%;
+max-width: 100%;
+min-height: 100%;
 }
 
 .sub {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     border-bottom: 1px solid lightgray;
 }
 
@@ -276,6 +279,7 @@ height: 100%;
     display: flex;
     align-items: center;
     padding-left: 15px;
+    padding-top: 15px;
     font-size: 20px;
     font-style: italic;
 }
@@ -283,19 +287,19 @@ height: 100%;
 #articles {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #sub-article {
     box-sizing: content-box;
     display: grid;
     grid-template-columns: 1fr 80px;
-    height: 20%;
 }
 
 #politic-pic {
     padding-top: 24px;
-    width: 75px;
-    height: 56px;
+    max-width: 75px;
+    min-height: 56px;
 }
 
 #central-section {
@@ -307,9 +311,13 @@ height: 100%;
     margin-right: 15px;
     padding-left: 15px;
     padding-right: 15px;
+
+    max-height: 100%;
 }
 
 #central-section-up-content {
+    max-height: 100%;
+    max-width: 100%;
     border-bottom: 1px solid lightgray;
     display: grid;
     grid-template-rows: 70% 1fr;
@@ -323,11 +331,14 @@ height: 100%;
 #central-section-up-content-pic > img {
     max-width: 100%;
     vertical-align: bottom;
+    object-fit: cover;
 }
 
 #central-section-down-content {
     display: grid;
     grid-template-columns: 70% 1fr;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 #central-section-down-content-pic > img {
@@ -337,17 +348,26 @@ height: 100%;
     padding-top: 15px;
 }
 
+#central-up-content-article {
+    min-height: 80%;
+}
+
 /*      SOME SETTINGS FOR FOOOOOOOOTER MAIN     */
 
 .footer-main {
     display: flex;
     align-items: center;
     border: 1px solid lightgray;
+
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .footer-main-info {
     margin: auto;
     font-size: 22px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /*      SOME SETTINGS FOR FOOTER        */
@@ -355,9 +375,12 @@ height: 100%;
 .foot-games {
     display: grid;
     grid-template-columns: 5% 1fr 5%;
+    max-width: 100%;
 }
 
 .footer-games-row {
+    max-width: 100%;
+    min-height: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -365,10 +388,14 @@ height: 100%;
 .games-wrapper {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    min-height: 100%;
 }
 
 .footer-game {
-    max-width: 320px;
+max-width: 300px;
+    min-height: 100%;
+    object-fit: cover;
 }
 
 .game-pic:hover,
@@ -382,7 +409,8 @@ cursor: pointer;
 
 .game-pic > img {
     max-width: 100%;
-    max-height: 90%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .game-info {
@@ -390,7 +418,7 @@ cursor: pointer;
 }
 
 .footer {
-    max-height: 90px;
+    min-height: 60px;
     background-color: black;
     padding-top: 35px;
     padding-bottom: 25px;
