@@ -1,0 +1,131 @@
+@media screen and (max-width: 787px) {
+.container {
+    display: grid;
+    max-width: 100%;
+    grid-template-areas:
+        "header header header header"
+        "main-content main-content main-content main-content"
+        "main-content main-content main-content main-content"
+        "main-content main-content main-content main-content";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 148px 1fr 1fr 80px;
+    gap: 1rem;
+    margin: auto;
+}
+
+.body {
+    max-width: 80%;
+    max-height: 100%;
+}
+    
+    .aside-header {
+        display: none;
+    }
+
+    #left-section {
+        grid-area: left;
+        display: flex;
+        max-width: 100%;
+max-height: 80%;
+padding-left: 2%;
+padding-right: 2%;
+margin-top: 60px;
+border: none;
+        }
+
+    #right-section {
+display: none;
+    }
+
+    #left-content-1-pic,
+    #left-content-2-pic {
+        display: flex;
+        justify-content: left;
+    }
+    
+    #left-content-1-pic > img,
+    #left-content-2-pic > img {
+    max-width: 70%;
+    min-height: 70%;
+    }
+
+    #left-content-1-text {
+        max-width: 70%;
+    max-height: 70%;
+    }
+
+    #left-content-1, #left-content-2 {
+        display: flex;
+    flex-direction: column;
+    margin: 20px;
+    }
+
+    .main-content {
+        display: grid;
+        /* grid-template-rows: 100px 1fr 80px;*/
+        grid-template-rows: 1fr;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .main-head-with-pic {
+        display: none;
+    }
+
+    .main-part-main-content {
+        display: grid;
+        grid-template-areas: "central"
+        "left";
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 1fr;
+        max-width: 100%;
+        margin: 2px;
+    }
+
+    #central-section {
+        display: grid;
+        grid-area: central;
+        grid-template-rows: 80% 1fr;
+        border: none;
+        padding: 1%;
+    }
+
+    #central-section-up-content {
+display: grid;
+grid-template-rows: 70% 1fr;
+max-width: 90%;
+max-height: 80%;
+padding-left: 2%;
+padding-right: 2%;
+border: none;
+    }
+
+    #central-section-down-content {
+        display: grid;
+        grid-template-rows: 1fr;
+        max-width: 100%;
+        max-height: 100%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border: none;
+    }
+
+    #central-up-content-article {
+        max-width: 90%;
+    }
+
+    #central-section-down-content-pic {
+        display: none;
+    }
+
+    #gap {
+        display: none;
+    }
+
+    .games-wrapper {
+        display: grid;
+        margin: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 15px;
+    }
+}

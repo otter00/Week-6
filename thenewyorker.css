@@ -17,7 +17,8 @@ p,
 /*      SOME SETTINGS FOR BODY      */
 
 body {
-    height: 1800px;
+    max-height: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     font-family: TNYAdobeCaslonPro, "Times New Roman", Times, serif;
 }
@@ -50,9 +51,11 @@ body {
 
 .up-header {
     display: flex;
+    max-height: 70%;
+    padding-top: 1em;
     justify-content: center;
     grid-row: 1/4;
-    grid-column: 1/4;
+    grid-column: 2/4;
 }
 
 .up-header:hover {
@@ -120,8 +123,9 @@ body {
 }
 
 .sub-header {
-    height: 52px;
-    display: flex;
+    min-height: 52px;
+    display: grid;
+    grid-template-rows: 1fr;
     grid-row: 4/5;
     grid-column: 1/5;
 
@@ -130,16 +134,14 @@ body {
 
 .sub-info {
     max-width: 100%;
-    display: flex;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));;
     margin: auto;
     font-family: Graphik, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
-    font-size: 12px;
-}
-
-.sub-info > span {
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 0.7em;
 }
 
 /*      SOME SETTINGS FOR MAIN PART     */
@@ -148,7 +150,8 @@ body {
     grid-area: main-content;
 
     display: grid;
-    grid-template-rows: 100px 1fr 80px;
+    /* grid-template-rows: 100px 1fr 80px; */
+    grid-template-rows: 100px 1fr;
     max-height: 100%;
 }
 
@@ -207,10 +210,10 @@ border: 1px solid lightgray;
     flex-direction: column;
 }
 
-#left-content-1-pic, #left-content-1-text,
+/* #left-content-1-pic, #left-content-1-text,
 #left-content-2-pic, #left-content-2-text {
     min-height: 50%;
-}
+} */
 
 #left-content-1-pic,
 #left-content-2-pic {
@@ -312,7 +315,7 @@ min-height: 100%;
     padding-left: 15px;
     padding-right: 15px;
 
-    max-height: 100%;
+    min-height: 80%;
 }
 
 #central-section-up-content {
@@ -337,8 +340,13 @@ min-height: 100%;
 #central-section-down-content {
     display: grid;
     grid-template-columns: 70% 1fr;
-    max-height: 100%;
+    min-height: 100%;
     max-width: 100%;
+}
+
+#central-section-down-content-pic {
+    min-height: 100%;
+    object-fit: cover;
 }
 
 #central-section-down-content-pic > img {
@@ -355,20 +363,22 @@ min-height: 100%;
 /*      SOME SETTINGS FOR FOOOOOOOOTER MAIN     */
 
 .footer-main {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr;
     align-items: center;
     border: 1px solid lightgray;
-
     max-width: 100%;
-    max-height: 100%;
 }
 
 .footer-main-info {
+    min-height: 50px;
+    max-height: 100px;
     margin: auto;
-    font-size: 22px;
     max-width: 100%;
-    max-height: 100%;
+    padding-top: 25px;
+    font-size: 1.3em;
 }
+
 
 /*      SOME SETTINGS FOR FOOTER        */
 
